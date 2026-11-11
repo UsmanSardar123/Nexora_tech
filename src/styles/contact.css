@@ -1,0 +1,716 @@
+.nexora-contact-page {
+  --nc-blue: var(--color-primary);
+  --nc-dark-blue: var(--color-primary-hover);
+  --nc-navy: var(--color-navy);
+  --nc-light: var(--color-surface-blue);
+  --nc-border: var(--color-border);
+
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff, #f2f8ff);
+  color: var(--nc-navy);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+.nexora-contact-page *,
+.nexora-contact-page *::before,
+.nexora-contact-page *::after {
+  box-sizing: border-box;
+}
+
+.nexora-contact-page a {
+  text-decoration: none;
+}
+
+.nexora-contact-page h1,
+.nexora-contact-page h2,
+.nexora-contact-page h3,
+.nexora-contact-page p {
+  margin-top: 0;
+}
+
+.nexora-contact-page .nc-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.nc-hero {
+  position: relative;
+  padding: 56px 0 40px;
+  background:
+    radial-gradient(ellipse at 85% 35%, rgb(180 216 255 / 38%), transparent 40%),
+    linear-gradient(120deg, #fff 20%, #f1f8ff 100%);
+}
+
+.nc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.nc-hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.nc-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 9px 20px;
+  border-radius: 50px;
+  background: #dcecff;
+  color: #0645ad;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nc-hero h1 {
+  margin-bottom: 22px;
+  color: var(--nc-navy);
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+
+.nc-hero h1 span {
+  position: relative;
+  display: inline-block;
+  color: var(--nc-blue);
+}
+
+.nc-hero h1 span::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--nc-blue);
+  content: "";
+}
+
+.nc-hero-text > p {
+  max-width: 580px;
+  margin-bottom: 0;
+  color: #233a66;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.nc-hero-art {
+  position: relative;
+  display: flex;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nc-art-circle {
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e1efff, #c9e1ff);
+  opacity: 0.75;
+}
+
+.nc-envelope {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 430px;
+}
+
+.nc-envelope svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.nc-contact-section {
+  padding: 24px 0 var(--site-section-space);
+}
+
+.nc-contact-card {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 95%);
+  border-radius: var(--radius-card);
+  background: rgb(255 255 255 / 76%);
+  box-shadow: 0 20px 55px rgb(26 89 177 / 10%);
+}
+
+.nc-contact-info {
+  position: relative;
+  overflow: hidden;
+  padding: 45px 40px;
+  background: linear-gradient(145deg, #0755d9, #073080);
+  color: #fff;
+}
+
+.nc-contact-info::before {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 7%);
+  content: "";
+}
+
+.nc-contact-info h2 {
+  position: relative;
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.nc-info-intro {
+  position: relative;
+  margin-bottom: 28px;
+  color: #e7f1ff;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.nc-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nc-info-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.nc-info-icon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: rgb(255 255 255 / 17%);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nc-info-item:hover .nc-info-icon {
+  transform: translateY(-3px);
+  background: rgb(255 255 255 / 25%);
+}
+
+.nc-info-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.nc-info-item h3 {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.nc-info-item p,
+.nc-info-item a {
+  margin-bottom: 0;
+  color: #f0f6ff;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.nc-info-item a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.nc-info-divider {
+  height: 1px;
+  margin: 30px 0 25px;
+  background: rgb(255 255 255 / 28%);
+}
+
+.nc-hours {
+  margin-bottom: 22px;
+  color: #e7f1ff;
+  font-size: 15px;
+}
+
+.nc-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nc-socials a {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 20%);
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nc-socials a:hover {
+  transform: translateY(-5px);
+  background: rgb(255 255 255 / 35%);
+}
+
+.nc-socials svg {
+  width: 21px;
+  height: 21px;
+  fill: currentcolor;
+}
+
+.nc-form-panel {
+  min-width: 0;
+  padding: 45px 40px;
+}
+
+.nc-form-panel h2 {
+  margin-bottom: 10px;
+  color: var(--nc-navy);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.nc-form-description {
+  margin-bottom: 30px;
+  color: #30466f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.nc-form {
+  width: 100%;
+}
+
+.nc-field {
+  margin-bottom: 22px;
+}
+
+.nc-field > label,
+.nc-field-label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--nc-navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nc-required {
+  color: #ef4444;
+}
+
+.nc-name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.nc-form input,
+.nc-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1.5px solid #b9cce8;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  box-shadow: none;
+  color: #10244c;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nc-form input {
+  height: 50px;
+  padding: 0 16px;
+}
+
+.nc-form textarea {
+  min-height: 125px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.nc-form input:focus,
+.nc-form textarea:focus {
+  border-color: var(--nc-blue);
+  box-shadow: 0 0 0 4px rgb(7 88 237 / 10%);
+}
+
+.nc-form input[aria-invalid="true"],
+.nc-form textarea[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.nc-name-caption {
+  margin-top: 6px;
+  color: #526789;
+  font-size: 13px;
+}
+
+.nc-error {
+  margin: 6px 0 0;
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.nc-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.nc-submit {
+  display: inline-flex;
+  min-width: 240px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 25px;
+  border: 0;
+  border-radius: var(--radius-button);
+  background: linear-gradient(110deg, #0758ed, #0864ff);
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.nc-submit:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgb(0 85 220 / 25%);
+}
+
+.nc-submit:focus-visible,
+.nc-socials a:focus-visible,
+.nc-info-item a:focus-visible,
+.nc-form-feedback a:focus-visible {
+  outline: 3px solid #79adff;
+  outline-offset: 3px;
+}
+
+.nc-submit:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.nc-submit svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.nc-submit:hover:not(:disabled) svg {
+  transform: translateX(5px);
+}
+
+.nc-form-feedback {
+  color: #30466f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.nc-form-feedback p {
+  margin: 14px 0 0;
+}
+
+.nc-form-feedback a {
+  display: inline-block;
+  margin-top: 7px;
+  color: #0758d8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nc-benefits-section {
+  padding: 0 0 var(--site-section-space);
+}
+
+.nc-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+  padding: 35px 20px;
+  border: 1px solid #edf4ff;
+  border-radius: 28px;
+  background: linear-gradient(120deg, #edf6ff, #f3f8ff);
+}
+
+.nc-benefits > div {
+  display: flex;
+  min-width: 0;
+}
+
+.nc-benefit {
+  position: relative;
+  width: 100%;
+  padding: 20px 25px;
+  text-align: center;
+  transition: transform 0.35s ease;
+}
+
+.nc-benefit:not(:last-child)::after {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background: #c9ddfb;
+  content: "";
+}
+
+.nc-benefit:hover {
+  transform: translateY(-8px);
+}
+
+.nc-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.nc-benefit-icon svg {
+  width: 55px;
+  height: 55px;
+  fill: none;
+  stroke: var(--nc-blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: transform 0.35s ease;
+}
+
+.nc-benefit:hover .nc-benefit-icon svg {
+  transform: scale(1.12);
+}
+
+.nc-benefit h3 {
+  margin-bottom: 10px;
+  color: var(--nc-navy);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nc-benefit p {
+  margin-bottom: 0;
+  color: #30466f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .nexora-contact-page .nc-container {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .nc-hero {
+    padding: 44px 0 32px;
+  }
+
+  .nc-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .nc-hero-art {
+    min-height: 260px;
+  }
+
+  .nc-art-circle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .nc-contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nc-contact-info,
+  .nc-form-panel {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nexora-contact-page .nc-container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .nc-hero {
+    padding: 36px 0 26px;
+  }
+
+  .nc-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .nc-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .nc-hero-text > p {
+    font-size: 15px;
+  }
+
+  .nc-hero-art {
+    min-height: 250px;
+  }
+
+  .nc-envelope {
+    max-width: 320px;
+  }
+
+  .nc-art-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .nc-contact-section {
+    padding: 12px 0 38px;
+  }
+
+  .nc-contact-card {
+    border-radius: 20px;
+  }
+
+  .nc-contact-info {
+    padding: 30px 25px;
+  }
+
+  .nc-contact-info h2 {
+    font-size: 29px;
+  }
+
+  .nc-form-panel {
+    padding: 30px 22px;
+  }
+
+  .nc-form-panel h2 {
+    font-size: 25px;
+  }
+
+  .nc-name-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .nc-submit {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .nc-benefits-section {
+    padding-bottom: 38px;
+  }
+
+  .nc-benefits {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .nc-benefit {
+    padding: 25px 15px;
+  }
+
+  .nc-benefit:not(:last-child)::after {
+    top: auto;
+    right: 15%;
+    bottom: 0;
+    width: 70%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nexora-contact-page .nc-container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .nc-hero h1 {
+    font-size: 34px;
+  }
+
+  .nc-contact-info {
+    padding: 26px 19px;
+  }
+
+  .nc-form-panel {
+    padding: 26px 18px;
+  }
+
+  .nc-info-item {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nc-info-icon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+
+  .nc-info-item p,
+  .nc-info-item a {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexora-contact-page *,
+  .nexora-contact-page *::before,
+  .nexora-contact-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

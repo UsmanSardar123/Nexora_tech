@@ -1,0 +1,73 @@
+.animated-heading {
+  margin: 0;
+  color: inherit;
+}
+
+.animated-heading__mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  vertical-align: bottom;
+}
+
+.animated-heading__word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.animated-heading__phrase {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.animated-heading__word--blue,
+.animated-heading__phrase .animated-heading__word {
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--nx-blue), #4f9bff, var(--nx-blue));
+  background-position: 0% 50%;
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animated-heading__phrase--light .animated-heading__word {
+  background-image: linear-gradient(90deg, #fff, #a8ccff, #fff);
+}
+
+.animated-heading__phrase--underline::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.03em;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--nx-blue), #4f9bff);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    transform var(--animated-heading-underline-duration, 0.6s) ease;
+}
+
+.animated-heading__phrase--light.animated-heading__phrase--underline::after {
+  background: linear-gradient(90deg, #fff, #a8ccff);
+}
+
+.animated-heading.is-visible .animated-heading__phrase--underline::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-heading__word--blue,
+  .animated-heading__phrase .animated-heading__word {
+    animation: none !important;
+    background-position: 50% 50%;
+  }
+
+  .animated-heading__phrase--underline::after {
+    transform: scaleX(1);
+    transition: none;
+  }
+}

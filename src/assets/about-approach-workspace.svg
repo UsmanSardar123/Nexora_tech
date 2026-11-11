@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" fill="none">
+  <defs>
+    <linearGradient id="background" x1="120" y1="75" x2="906" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset=".58" stop-color="#EAF3FF"/>
+      <stop offset="1" stop-color="#F6FAFF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="matrix(0 342 -408 0 524 330)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D2E5FF"/>
+      <stop offset="1" stop-color="#D2E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screen" x1="295" y1="179" x2="710" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAFF"/>
+      <stop offset="1" stop-color="#EAF1FB"/>
+    </linearGradient>
+    <linearGradient id="laptopBase" x1="202" y1="483" x2="812" y2="554" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7B5C6"/>
+      <stop offset=".2" stop-color="#F9FBFE"/>
+      <stop offset=".53" stop-color="#C8D4E1"/>
+      <stop offset=".83" stop-color="#F5F8FC"/>
+      <stop offset="1" stop-color="#99AABD"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="90" y1="555" x2="920" y2="689" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF5FD"/>
+      <stop offset=".52" stop-color="#DFEAF8"/>
+      <stop offset="1" stop-color="#F4F8FE"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="465" y1="288" x2="699" y2="405" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1871ED"/>
+      <stop offset="1" stop-color="#6EA8FA"/>
+    </linearGradient>
+    <filter id="shadow" x="125" y="431" width="771" height="226" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="282" y="164" width="454" height="292" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="760" fill="url(#background)"/>
+  <ellipse cx="535" cy="365" rx="414" ry="325" fill="url(#halo)"/>
+  <circle cx="812" cy="155" r="76" fill="#D9EAFE" fill-opacity=".52"/>
+  <path d="M66 560C247 540 358 560 506 568C688 578 822 545 934 558V706H66V560Z" fill="url(#desk)"/>
+  <path d="M67 561C248 541 362 560 506 568C691 578 819 547 933 559" stroke="#D5E3F3" stroke-width="2"/>
+  <ellipse cx="523" cy="578" rx="344" ry="42" fill="#7892B1" fill-opacity=".2" filter="url(#shadow)"/>
+
+  <g>
+    <path d="M148 554C150 489 155 419 182 354M158 514C116 487 95 450 97 405C137 424 162 464 158 514ZM167 462C197 422 232 403 270 408C247 445 211 468 167 462ZM175 414C144 379 136 341 149 307C182 337 195 376 175 414ZM183 374C211 336 246 320 283 326C258 358 224 377 183 374Z" fill="#238B69"/>
+    <path d="M157 499C124 473 108 443 109 414C140 435 157 463 157 499ZM173 450C201 419 231 407 259 411C239 437 210 453 173 450ZM179 406C153 376 150 346 158 319C182 344 191 375 179 406ZM188 368C214 340 240 329 268 331C249 355 222 370 188 368Z" fill="#3AAF7D"/>
+    <path d="M115 557H220L212 620H123L115 557Z" fill="#F8FBFF" stroke="#CAD8E8" stroke-width="3"/>
+    <ellipse cx="167.5" cy="557" rx="52.5" ry="9" fill="#E0EAF5"/>
+  </g>
+
+  <g>
+    <rect x="256" y="124" width="506" height="362" rx="25" fill="#35465D"/>
+    <rect x="264" y="132" width="490" height="347" rx="20" fill="#14233A"/>
+    <rect x="282" y="164" width="454" height="292" rx="14" fill="url(#screen)"/>
+    <g clip-path="url(#screenClip)">
+      <rect x="282" y="164" width="454" height="292" fill="url(#screen)"/>
+      <rect x="282" y="164" width="71" height="292" fill="#132B4E"/>
+      <circle cx="300" cy="184" r="7" fill="#428AF5"/>
+      <path d="M315 181H339M315 187H332" stroke="#E3EEFF" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="293" y="206" width="49" height="21" rx="6" fill="#1C4276"/>
+      <path d="M302 213H332M302 219H323" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+      <path d="M300 245H335M300 267H335M300 289H335M300 311H335M300 333H335M300 355H335M300 377H335" stroke="#A7BDDA" stroke-opacity=".72" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="294" cy="245" r="3" fill="#72A4E8"/>
+      <circle cx="294" cy="267" r="3" fill="#72A4E8"/>
+      <circle cx="294" cy="289" r="3" fill="#72A4E8"/>
+      <circle cx="294" cy="311" r="3" fill="#72A4E8"/>
+      <circle cx="294" cy="333" r="3" fill="#72A4E8"/>
+      <circle cx="294" cy="355" r="3" fill="#72A4E8"/>
+
+      <text x="371" y="191" fill="#17345C" font-family="Arial, sans-serif" font-size="12" font-weight="700">Product delivery plan</text>
+      <text x="371" y="206" fill="#7B8DA5" font-family="Arial, sans-serif" font-size="7">From discovery to launch</text>
+      <rect x="371" y="218" width="106" height="43" rx="7" fill="#FFFFFF" stroke="#E1E9F4"/>
+      <rect x="485" y="218" width="106" height="43" rx="7" fill="#FFFFFF" stroke="#E1E9F4"/>
+      <rect x="599" y="218" width="121" height="43" rx="7" fill="#FFFFFF" stroke="#E1E9F4"/>
+      <text x="381" y="232" fill="#7B8CA4" font-family="Arial, sans-serif" font-size="7">PROJECT HEALTH</text>
+      <text x="381" y="249" fill="#17345C" font-family="Arial, sans-serif" font-size="13" font-weight="700">On track</text>
+      <circle cx="462" cy="245" r="5" fill="#32B58B"/>
+      <text x="495" y="232" fill="#7B8CA4" font-family="Arial, sans-serif" font-size="7">MILESTONES</text>
+      <text x="495" y="249" fill="#17345C" font-family="Arial, sans-serif" font-size="13" font-weight="700">08 / 12</text>
+      <path d="M558 246L562 250L569 241" stroke="#347FF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="609" y="232" fill="#7B8CA4" font-family="Arial, sans-serif" font-size="7">CLIENT SATISFACTION</text>
+      <text x="609" y="249" fill="#17345C" font-family="Arial, sans-serif" font-size="13" font-weight="700">98.4%</text>
+      <path d="M677 249L682 244L687 246L694 237L702 235" stroke="#35AF87" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="371" y="271" width="219" height="168" rx="8" fill="#FFFFFF" stroke="#E1E9F4"/>
+      <text x="383" y="289" fill="#17345C" font-family="Arial, sans-serif" font-size="9" font-weight="700">Roadmap &amp; milestones</text>
+      <text x="383" y="302" fill="#91A0B4" font-family="Arial, sans-serif" font-size="7">Planned delivery timeline</text>
+      <path d="M386 410H575M386 386H575M386 362H575M386 338H575M386 314H575" stroke="#EDF1F7" stroke-width="1"/>
+      <path d="M393 397C420 391 426 367 449 372C472 378 480 338 501 346C522 354 534 321 555 326C564 328 569 321 578 315" stroke="#2D7BEF" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="449" cy="372" r="4" fill="#FFFFFF" stroke="#2D7BEF" stroke-width="2"/>
+      <circle cx="501" cy="346" r="4" fill="#FFFFFF" stroke="#2D7BEF" stroke-width="2"/>
+      <circle cx="555" cy="326" r="4" fill="#FFFFFF" stroke="#2D7BEF" stroke-width="2"/>
+
+      <rect x="599" y="271" width="121" height="168" rx="8" fill="#FFFFFF" stroke="#E1E9F4"/>
+      <text x="610" y="289" fill="#17345C" font-family="Arial, sans-serif" font-size="9" font-weight="700">Delivery phases</text>
+      <rect x="610" y="302" width="99" height="31" rx="6" fill="#F2F7FF"/>
+      <circle cx="621" cy="317" r="6" fill="#347FF0"/>
+      <path d="M618.5 317L620.5 319L624 315" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="633" y="315" fill="#284665" font-family="Arial, sans-serif" font-size="7" font-weight="700">Discover</text>
+      <text x="633" y="324" fill="#8494AA" font-family="Arial, sans-serif" font-size="6">Requirements</text>
+      <rect x="610" y="339" width="99" height="31" rx="6" fill="#F2F7FF"/>
+      <circle cx="621" cy="354" r="6" fill="#347FF0"/>
+      <path d="M618.5 354L620.5 356L624 352" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="633" y="352" fill="#284665" font-family="Arial, sans-serif" font-size="7" font-weight="700">Design</text>
+      <text x="633" y="361" fill="#8494AA" font-family="Arial, sans-serif" font-size="6">Solution plan</text>
+      <rect x="610" y="376" width="99" height="31" rx="6" fill="#F2F7FF"/>
+      <circle cx="621" cy="391" r="6" fill="#AFC9EE"/>
+      <text x="633" y="389" fill="#284665" font-family="Arial, sans-serif" font-size="7" font-weight="700">Deliver</text>
+      <text x="633" y="398" fill="#8494AA" font-family="Arial, sans-serif" font-size="6">Launch &amp; support</text>
+    </g>
+    <circle cx="509" cy="145" r="3" fill="#8292A7"/>
+    <path d="M210 485H806L878 530C883 534 879 540 871 542H143C135 539 132 534 138 529L210 485Z" fill="url(#laptopBase)" stroke="#98A8BA" stroke-width="2"/>
+    <path d="M214 490H801L856 524H163L214 490Z" fill="#DDE5EF"/>
+    <g fill="#889AAF" fill-opacity=".7">
+      <path d="M249 496H282L288 501H243L249 496ZM290 496H323L329 501H284L290 496ZM331 496H364L370 501H325L331 496ZM372 496H405L411 501H366L372 496ZM413 496H446L452 501H407L413 496ZM454 496H487L493 501H448L454 496ZM495 496H528L534 501H489L495 496ZM536 496H569L575 501H530L536 496ZM577 496H610L616 501H571L577 496ZM618 496H651L657 501H612L618 496ZM659 496H692L698 501H653L659 496ZM700 496H733L739 501H694L700 496Z"/>
+      <path d="M233 505H271L277 510H227L233 505ZM279 505H317L323 510H273L279 505ZM325 505H363L369 510H319L325 505ZM371 505H409L415 510H365L371 505ZM417 505H455L461 510H411L417 505ZM463 505H501L507 510H457L463 505ZM509 505H547L553 510H503L509 505ZM555 505H593L599 510H549L555 505ZM601 505H639L645 510H595L601 505ZM647 505H685L691 510H641L647 505ZM693 505H731L737 510H687L693 505ZM739 505H777L783 510H733L739 505Z"/>
+    </g>
+    <path d="M429 526H573L560 534H442L429 526Z" fill="#A9B7C7"/>
+  </g>
+
+  <g transform="rotate(-7 838 568)">
+    <rect x="778" y="535" width="122" height="82" rx="7" fill="#1763C6"/>
+    <rect x="785" y="542" width="108" height="68" rx="4" fill="#2E7FE5"/>
+    <path d="M797 549H881M797 601H881" stroke="#92C0FF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(18 758 575)">
+    <rect x="753" y="546" width="6" height="98" rx="3" fill="#16385F"/>
+    <path d="M753 549L756 536L759 549" fill="#5FA5FF"/>
+  </g>
+  <path d="M80 675H920" stroke="#C9D9EC" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+</svg>
