@@ -7,12 +7,30 @@
   --color-muted: #5b6b84;
   --color-surface-blue: #edf5ff;
   --color-border: #dce5f1;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-raised: #f7faff;
   --shadow-card: 0 12px 32px rgb(11 39 85 / 7%);
   --radius-card: 16px;
   --radius-button: 10px;
   --site-container-width: 1200px;
   --site-section-space: clamp(48px, 5vw, 68px);
   --site-section-space-compact: clamp(38px, 4vw, 52px);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-primary: #4b83e6;
+  --color-primary-hover: #366dce;
+  --color-navy: #e7eefb;
+  --color-text: #d4deed;
+  --color-muted: #a7b6cc;
+  --color-surface-blue: #1a2b43;
+  --color-border: #30425c;
+  --color-page: #0b1220;
+  --color-surface: #111c2e;
+  --color-surface-raised: #16243a;
+  --shadow-card: 0 12px 32px rgb(0 0 0 / 24%);
 }
 
 *,
@@ -24,7 +42,7 @@
 body {
   margin: 0;
   overflow-x: clip;
-  background: #fff;
+  background: var(--color-page);
   color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -77,9 +95,9 @@ section[id] {
   flex: 0 0 96px;
   align-items: center;
   padding: 0 24px;
-  border-bottom: 1px solid rgb(220 229 241 / 85%);
-  background: rgb(255 255 255 / 94%);
-  color: #0b1b43;
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-page) 94%, transparent);
+  color: var(--color-navy);
   font-family: var(--font-sans);
   backdrop-filter: blur(14px);
 }
@@ -101,7 +119,7 @@ section[id] {
   align-items: center;
   gap: 11px;
   justify-self: start;
-  color: #0b1b43;
+  color: var(--color-navy);
 }
 
 .site-brand-mark {
@@ -110,7 +128,7 @@ section[id] {
   height: 46px;
   flex: 0 0 46px;
   place-items: center;
-  color: #1263f1;
+  color: var(--color-primary);
   font-size: 46px;
   font-weight: 900;
   letter-spacing: -4px;
@@ -118,7 +136,7 @@ section[id] {
 }
 
 .site-brand-name {
-  color: #0b1b43;
+  color: var(--color-navy);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.2px;
@@ -141,7 +159,7 @@ section[id] {
 .site-nav a {
   position: relative;
   padding: 10px 0;
-  color: #0b1b43;
+  color: var(--color-navy);
   font-size: 15px;
   font-weight: 600;
   transition: color 0.2s ease;
@@ -154,7 +172,7 @@ section[id] {
   left: 0;
   height: 2px;
   border-radius: 2px;
-  background: #1263f1;
+  background: var(--color-primary);
   content: "";
   transform: scaleX(0);
   transform-origin: center;
@@ -163,7 +181,7 @@ section[id] {
 
 .site-nav a:hover,
 .site-nav a.active {
-  color: #1263f1;
+  color: var(--color-primary);
 }
 
 .site-nav a:hover::after,
@@ -180,9 +198,9 @@ section[id] {
   justify-self: end;
   gap: 9px;
   padding: 0 21px;
-  border: 1px solid #1263f1;
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius-button);
-  background: #1263f1;
+  background: var(--color-primary);
   color: #fff !important;
   font-size: 14px;
   font-weight: 600;
@@ -197,8 +215,8 @@ section[id] {
 .site-header-cta:hover,
 .site-nav-cta:hover {
   transform: translateY(-1px);
-  border-color: #0b54d5;
-  background: #0b54d5;
+  border-color: var(--color-primary-hover);
+  background: var(--color-primary-hover);
   box-shadow: 0 5px 12px rgb(18 99 241 / 16%);
 }
 
@@ -234,11 +252,46 @@ textarea:focus-visible {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  border: 1px solid #e5eaf2;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
-  background: #fff;
-  color: #0b1b43;
+  background: var(--color-surface);
+  color: var(--color-navy);
   cursor: pointer;
+}
+
+.site-theme-toggle {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-navy);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-theme-toggle:hover {
+  border-color: var(--color-border);
+  background: var(--color-surface-blue);
+}
+
+.site-theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .site-menu-toggle span {
@@ -264,6 +317,7 @@ textarea:focus-visible {
 
 .site-menu-toggle:focus-visible,
 .site-nav a:focus-visible,
+.site-theme-toggle:focus-visible,
 .site-header-cta:focus-visible,
 .site-nav-cta:focus-visible {
   outline: 3px solid #75aaff;
@@ -360,7 +414,7 @@ textarea:focus-visible {
     padding: 0 20px;
     overflow: hidden;
     border-bottom: 1px solid transparent;
-    background: #fff;
+    background: var(--color-page);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-6px);
@@ -378,7 +432,7 @@ textarea:focus-visible {
     max-height: 440px;
     padding-top: 10px;
     padding-bottom: 22px;
-    border-color: #e6e8ed;
+    border-color: var(--color-border);
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
@@ -388,7 +442,7 @@ textarea:focus-visible {
 
   .site-nav a {
     padding: 12px 0;
-    border-bottom: 1px solid #edf1f7;
+    border-bottom: 1px solid var(--color-border);
     font-size: 15px;
   }
 
@@ -402,6 +456,12 @@ textarea:focus-visible {
     margin-top: 16px;
     padding: 0 22px;
     border-bottom: 0;
+  }
+
+  .site-nav .site-theme-toggle {
+    align-self: flex-start;
+    justify-content: flex-start;
+    margin-top: 8px;
   }
 }
 
@@ -428,6 +488,127 @@ textarea:focus-visible {
     left: -14px;
     padding-right: 14px;
     padding-left: 14px;
+  }
+}
+
+html[data-theme="dark"] .nexora-footer {
+  border-color: var(--color-border);
+  background: linear-gradient(135deg, #101c2e, #0b1220);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .nexora-footer h2,
+html[data-theme="dark"] .nexora-footer-logo,
+html[data-theme="dark"] .nexora-footer-logo span {
+  color: var(--color-navy) !important;
+}
+
+html[data-theme="dark"] .nexora-footer p,
+html[data-theme="dark"] .nexora-footer a {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .nexora-footer a:hover {
+  color: #9dc0ff;
+}
+
+html[data-theme="dark"] .nexora-footer .nexora-footer-social a {
+  background: var(--color-surface-blue);
+  color: #9dc0ff;
+}
+
+html[data-theme="dark"] .nexora-footer-bottom {
+  border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .site-nav .site-theme-toggle {
+  color: var(--color-navy);
+}
+
+html[data-theme="dark"] .nx-home,
+html[data-theme="dark"] .nx-about,
+html[data-theme="dark"] .nexora-services-page,
+html[data-theme="dark"] .nexora-blog-page,
+html[data-theme="dark"] .nexora-contact-page {
+  background: var(--color-page);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .nx-home > .nx-hero {
+  background:
+    radial-gradient(ellipse at 84% 48%, rgb(44 86 150 / 26%), transparent 42%),
+    linear-gradient(115deg, #0b1220 12%, #101c2e 100%);
+}
+
+html[data-theme="dark"] .nx-about .nx-hero,
+html[data-theme="dark"] .nexora-services-page .ns-hero,
+html[data-theme="dark"] .nexora-blog-page .blog-hero,
+html[data-theme="dark"] .nc-hero {
+  background: linear-gradient(135deg, #101c2e, #0b1220);
+}
+
+html[data-theme="dark"] .nx-home > section:not(.nx-hero),
+html[data-theme="dark"] .nx-about section,
+html[data-theme="dark"] .nexora-services-page section,
+html[data-theme="dark"] .nexora-blog-page section:not(.blog-hero),
+html[data-theme="dark"] .nexora-contact-page section {
+  background: var(--color-page);
+}
+
+html[data-theme="dark"] .nx-home :is([class*="card"], [class*="panel"]),
+html[data-theme="dark"] .nx-about :is([class*="card"], [class*="panel"]),
+html[data-theme="dark"] .nexora-services-page :is([class*="card"], [class*="panel"]),
+html[data-theme="dark"] .nexora-blog-page :is([class*="card"], [class*="panel"]),
+html[data-theme="dark"] .nexora-contact-page :is([class*="card"], [class*="panel"]) {
+  background: var(--color-surface-raised);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] :is(.nx-home, .nx-about, .nexora-services-page, .nexora-blog-page, .nexora-contact-page) :is(h1, h2, h3) {
+  color: var(--color-navy);
+}
+
+html[data-theme="dark"] :is(.nx-home, .nx-about, .nexora-services-page, .nexora-blog-page, .nexora-contact-page) p {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .nexora-blog-page :is(input, select, textarea),
+html[data-theme="dark"] .nexora-contact-page :is(input, select, textarea) {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .nexora-blog-page :is(.category-button, .blog-search-form input),
+html[data-theme="dark"] .nx-about .nx-btn-outline,
+html[data-theme="dark"] .nexora-services-page .ns-button-outline {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .nexora-blog-page .blog-demo-notice {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .nx-about .nx-eyebrow,
+html[data-theme="dark"] .nexora-services-page .ns-eyebrow,
+html[data-theme="dark"] .nexora-blog-page .blog-eyebrow,
+html[data-theme="dark"] .nc-badge {
+  background: var(--color-surface-blue);
+  color: #b7d0ff;
+}
+
+html[data-theme="dark"] .nexora-services-page .ns-hero::before {
+  background: var(--color-page);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-theme-toggle {
+    transition: none;
   }
 }
 
