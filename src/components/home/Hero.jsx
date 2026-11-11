@@ -154,7 +154,23 @@ function Hero() {
       </div>
 
       <Reveal className="nx-hero-visual" direction="right">
-        <div className="nx-hero-image">
+        <motion.div
+          className="nx-hero-image"
+          animate={
+            prefersReducedMotion
+              ? undefined
+              : { y: [0, -12, 0], rotate: [0, 0.8, 0, -0.6, 0] }
+          }
+          transition={
+            prefersReducedMotion
+              ? undefined
+              : {
+                  duration: 6,
+                  ease: 'easeInOut',
+                  repeat: Infinity,
+                }
+          }
+        >
           <div className="nx-hero-image-inner">
             <img
               className="nx-hero-image-content"
@@ -165,7 +181,7 @@ function Hero() {
               fetchPriority="high"
             />
           </div>
-        </div>
+        </motion.div>
       </Reveal>
     </section>
   )
